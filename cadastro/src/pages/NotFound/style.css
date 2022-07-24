@@ -1,7 +1,8 @@
-.not-found{
-    margin: 10px;
+body{
+    background-color: white;
 }
 
-.not-found h1{
-    
+.not-found{
+    margin: 10px;
+    color: white;
 }

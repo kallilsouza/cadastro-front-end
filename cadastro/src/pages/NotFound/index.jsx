@@ -1,7 +1,7 @@
 import { React } from 'react';
 import './style.css'
 
-const CreateAccount = () => {   
+const NotFound = () => {   
     return (
         <div className="not-found">
             <h1>404 Not found</h1>
@@ -10,4 +10,4 @@ const CreateAccount = () => {
     )
 }
 
-export default CreateAccount;
+export default NotFound;

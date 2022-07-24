@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(51, 51, 51);
+}
+
+.edicao{
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    margin-left: 50%;
+    transform: translate(-50%);
+    padding: 10px;
+    margin-top: 50px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.edicao h1{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);    
+    padding: 10px;
+    font-size: 25px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.edicao-form{
+    margin-top: 10px;
+}
+
+fieldset {
+    background-color: white;
+    padding: 10px;
+    margin: 5px 0px 5px 0px;
+}
+  
+legend {
+    background-color: rgb(223, 87, 87);
+    color: white;
+    padding: 5px;
+}
+
+fieldset label{
+    display: inline-block;
+    width: 65px;
+}
+
+fieldset input{
+    font-size: 17px;
+    padding: 5px;
+    width: 250px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.5);
+    border-width: 2px;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+.form-erro{
+    text-align: center;
+    color: red;
+}
+
+.edicao-form button[type="submit"]{
+    font-size: 17px;
+    padding: 5px;
+    position: relative;
+    left: 100%;
+    top: 10px;
+    transform: translate(-100%);
+    background-color: rgb(223, 87, 87);
+    border-style: none;
+    color: white;
+    cursor: pointer;
+}
+
+.edicao-form input:focus{
+    border-color: rgb(223, 87, 87);
+    outline: none;
+}
+
+.login-link{
+    color: rgb(223, 87, 87);
+    text-decoration: none;
+}
+
+.create-account-link:hover{
+    text-decoration: underline;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: normal;
+    width: fit-content;
+}

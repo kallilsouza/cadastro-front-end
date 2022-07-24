@@ -10,6 +10,7 @@ import Login from './pages/Login'
 import NotFound from './pages/NotFound'
 import Home from './pages/Home'
 import CriarConta from './pages/CriarConta'
+import EditarConta from "./pages/EditarConta";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -21,6 +22,7 @@ root.render(
       <Route path="login" element={<Login />} />
       <Route path="home" element={<Home />}/>
       <Route path="criar-conta" element={<CriarConta />} />
+      <Route path="editar-conta" element={<EditarConta />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>

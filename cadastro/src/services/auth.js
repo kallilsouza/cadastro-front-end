@@ -8,12 +8,14 @@ export const isAuthenticated = () => {
   
 export const getToken = () => localStorage.getItem("accessToken");
 export const getUsername = () => localStorage.getItem("username");
+export const getUserId = () => localStorage.getItem("userId");
 
 export const login = (tokens) => {
   localStorage.setItem("accessToken", tokens.access);
   localStorage.setItem("refreshToken", tokens.refresh);
-  const { username } = parseJwt(tokens.refresh);
+  const { username, id } = parseJwt(tokens.refresh);
   localStorage.setItem("username", username);
+  localStorage.setItem("userId", id);
 };
 export const logout = () => {
   localStorage.removeItem("accessToken");

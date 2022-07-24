@@ -1,9 +1,8 @@
 import { React, useEffect, useCallback } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { isAuthenticated } from "../../services/auth";
 import api from "../../services/api";
-import { useNavigate } from "react-router-dom";
 import './style.css'
 
 const CriarConta = () => {   

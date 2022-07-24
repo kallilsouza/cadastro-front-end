@@ -1,23 +1,31 @@
 import { React, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
-import { logout, isAuthenticated } from "../../services/auth";
+import { useNavigate, Link } from "react-router-dom";
+import Header from '../../components/Header';
+import { isAuthenticated, getUsername } from "../../services/auth";
 import './style.css'
 
 const Home = () => {   
     const navigate = useNavigate();
-    const handleLogout = () => {
-        logout();
-        navigate('/login');
-    };
+    const username = getUsername();
     useEffect(() => {
         if(!isAuthenticated()){
             navigate('/login');
         }
     }, [navigate]);
+
     return (
+        // <div>
+        //     <div>{ username }</div>
+        //     <button onClick={handleLogout} id="logout-btn">logout</button>
+        // </div>
         <div>
-            <div>Not ready yet</div>
-            <button onClick={handleLogout} id="logout-btn">logout</button>
+            <Header />
+            <div className="home-content">
+                <h1>Olá, {username}!</h1>
+                <div className="links">
+                    <Link to="/editar-conta">Editar informações de cadastro</Link>
+                </div>                
+            </div>            
         </div>
     )
 }
