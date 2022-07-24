@@ -5,7 +5,7 @@ import { getToken } from "./auth";
 import authInterceptor from "./authInterceptor";
 
 const api = axios.create({
-  baseURL: "http://localhost/api/"
+  baseURL: "http://localhost:8000/api/"
 });
 
 api.interceptors.request.use(

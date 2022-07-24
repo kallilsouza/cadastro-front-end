@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const REFRESH_URL = "http://localhost/api/refresh/"
+const REFRESH_URL = "http://localhost:8000/api/refresh/"
 
 let isRefreshing = false;
 let failedQueue = [];
