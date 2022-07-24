@@ -3,7 +3,7 @@ import Header from '../../components/Header';
 import { useForm } from "react-hook-form";
 import api from "../../services/api";
 import { useNavigate } from "react-router-dom";
-import { getUserId } from "../../services/auth";
+import { getUserId, logout } from "../../services/auth";
 import './style.css'
 
 const EditarConta = () => {   
@@ -62,9 +62,19 @@ const EditarConta = () => {
         });
     }, [userId]);
 
-    useEffect(() => {
-        console.log(user);
-    }, [user]);
+    const deleteUser = useCallback(async () => {
+        if(window.confirm("Apagar conta? Esta ação não pode ser desfeita.")){
+            api.delete(`usuarios/${userId}/`).then(res => {
+                if(res.status === 200 || res.status === 204){
+                    logout();
+                    alert("Conta apagada com sucesso.");
+                    navigate('/login');
+                }
+            }).catch(err => {
+                console.log(err);
+            });
+        }        
+    }, [userId, navigate])
 
     return (
         <div>
@@ -162,7 +172,8 @@ const EditarConta = () => {
                         </fieldset>
                         <button type="submit">salvar</button>  
                         <br />
-                    </form>                                
+                    </form>      
+                    <button onClick={deleteUser} className="delete-btn">apagar conta</button>                          
             </div>
             )}
         </div>
