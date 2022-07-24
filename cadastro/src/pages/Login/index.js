@@ -29,10 +29,10 @@ const Login = () => {
 
     return (
         <div className="login">
-            <h1>Login</h1>
+            <h1>Olá visitante</h1>
             <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
                 <div className="login-form-inputs">
-                    <input type="text" name="email" placeholder="e-mail" {...register("email", { required: true })}></input>
+                    <input type="text" name="login" placeholder="E-mail, CPF ou PIS" {...register("login", { required: true })}></input>
                     <input type="password" name="password" placeholder="senha" {...register("password")}></input>                    
                 </div>
                 <button type="submit">login</button>  
