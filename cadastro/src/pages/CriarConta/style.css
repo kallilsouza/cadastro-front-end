@@ -9,8 +9,7 @@ body{
 
 .cadastro{
     background-color: rgb(255, 255, 255);
-    min-width: fit-content;
-    max-width: 90%;
+    width: fit-content;
     margin-left: 50%;
     transform: translate(-50%);
     margin-top: 30px;
@@ -34,11 +33,24 @@ body{
     margin-top: 10px;
 }
 
-.cadastro-form-inputs{
-    width: fit-content;
+fieldset {
+    background-color: white;
+    padding: 10px;
+    margin: 5px 0px 5px 0px;
+}
+  
+legend {
+    background-color: rgb(223, 87, 87);
+    color: white;
+    padding: 5px;
 }
 
-.cadastro-form-inputs input{
+fieldset label{
+    display: inline-block;
+    width: 65px;
+}
+
+fieldset input{
     font-size: 17px;
     padding: 5px;
     width: 250px;
@@ -53,9 +65,9 @@ body{
     font-size: 17px;
     padding: 5px;
     position: relative;
-    left: 50%;
+    left: 100%;
     top: 10px;
-    transform: translate(-50%);
+    transform: translate(-100%);
     background-color: rgb(223, 87, 87);
     border-style: none;
     color: white;
